@@ -1,0 +1,11 @@
+This is a fork of PocketSphinx for my voice controlled home automation system using the raspberry pi.
+
+Based on PocketSphinx-0.8
+
+This software is ONLY compatible with Linux. Don't even try building it on another platform.
+
+./autogen.sh
+./configure
+make clean all
+make
+make install

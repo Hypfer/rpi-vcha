@@ -1,0 +1,60 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:		rpi-vcha
+# Required-Start:	$remote_fs
+# Required-Stop:	$remote_fs
+# Should-Start:		$network
+# Should-Stop:
+# Default-Start:	2 3 4 5
+# Default-Stop:		0 1 6
+# Short-Description:	Voice Controlled Home Automation
+# Description:		Voice Controlled Home Automation
+### END INIT INFO
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
+NAME=rpi-vcha
+DESC="Voice Controlled Home Automation"
+PIDFILE=/var/run/rpi-vcha.pid
+
+
+. /lib/lsb/init-functions
+
+case "$1" in
+  start)
+	if [ -f $PIDFILE ]
+	then
+		log_daemon_msg "rpi-vcha is already running. (Or the pidfile still exists)"
+		echo ""
+		exit 0
+	fi
+	log_daemon_msg "Starting $DESC" "$NAME"
+	echo ""
+	/usr/local/bin/rpi-vcha -adcdev plughw:1,0 -lm /usr/local/etc/rpi-vcha/languagemodel.lm -dict /usr/local/etc/rpi-vcha/dict.dic 2>/dev/null >> /var/log/rpi-vcha.log &
+	echo $! > $PIDFILE
+	;;
+  stop)
+	if [ -f $PIDFILE ]
+	then
+		log_daemon_msg "Stopping $DESC" "$NAME"
+		echo ""
+		kill -9 $(cat $PIDFILE) 2>&1 > /dev/null
+		rm $PIDFILE 2>&1 > /dev/null
+	else
+	log_daemon_msg "$NAME is not running"
+	echo ""
+	fi
+	;;
+  restart)
+  	$0 stop
+	sleep 8
+	$0 start
+	;;
+  *)
+	N=/etc/init.d/$NAME
+	echo "Usage: $N {start|stop|restart}" >&2
+	exit 1
+	;;
+esac
+
+exit 0

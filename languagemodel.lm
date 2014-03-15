@@ -1,0 +1,62 @@
+Language model created by QuickLM on Thu Mar 13 08:04:42 EDT 2014
+Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
+
+The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
+
+The code that was used to produce this language model is available in Open Source.
+Please visit http://www.speech.cs.cmu.edu/tools/ for more information
+
+The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
+This model based on a corpus of 7 sentences and 10 words
+
+\data\
+ngram 1=10
+ngram 2=15
+ngram 3=14
+
+\1-grams:
+-0.9183 </s> -0.3010
+-0.9183 <s> -0.2452
+-1.7634 AN -0.2452
+-1.7634 AUS -0.2452
+-0.9183 COMPUTER -0.1908
+-1.4624 LAMPE -0.2858
+-1.7634 NEWS -0.2452
+-1.7634 STATUS -0.2452
+-1.7634 WETTER -0.2452
+-1.7634 ZEIT -0.2452
+
+\2-grams:
+-0.3010 <s> COMPUTER 0.0000
+-0.3010 AN </s> -0.3010
+-0.3010 AUS </s> -0.3010
+-1.1461 COMPUTER </s> -0.3010
+-0.8451 COMPUTER LAMPE 0.0000
+-1.1461 COMPUTER NEWS 0.0000
+-1.1461 COMPUTER STATUS 0.0000
+-1.1461 COMPUTER WETTER 0.0000
+-1.1461 COMPUTER ZEIT 0.0000
+-0.6021 LAMPE AN 0.0000
+-0.6021 LAMPE AUS 0.0000
+-0.3010 NEWS </s> -0.3010
+-0.3010 STATUS </s> -0.3010
+-0.3010 WETTER </s> -0.3010
+-0.3010 ZEIT </s> -0.3010
+
+\3-grams:
+-1.1461 <s> COMPUTER </s>
+-0.8451 <s> COMPUTER LAMPE
+-1.1461 <s> COMPUTER NEWS
+-1.1461 <s> COMPUTER STATUS
+-1.1461 <s> COMPUTER WETTER
+-1.1461 <s> COMPUTER ZEIT
+-0.6021 COMPUTER LAMPE AN
+-0.6021 COMPUTER LAMPE AUS
+-0.3010 COMPUTER NEWS </s>
+-0.3010 COMPUTER STATUS </s>
+-0.3010 COMPUTER WETTER </s>
+-0.3010 COMPUTER ZEIT </s>
+-0.3010 LAMPE AN </s>
+-0.3010 LAMPE AUS </s>
+
+\end\
