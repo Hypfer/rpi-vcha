@@ -32,7 +32,7 @@ cd ..
 echo "Installiere Skripte"
 cp ./newsttscron.sh /usr/local/bin/newsttscron.sh
 cp ./wetterttscron.sh /usr/local/bin/wetterttscron.sh
-cp ./newsttscron.sh /usr/local/bin/zeittts.sh
+cp ./zeittts.sh /usr/local/bin/zeittts.sh
 chmod +x /usr/local/bin/newsttscron.sh
 chmod +x /usr/local/bin/wetterttscron.sh
 chmod +x /usr/local/bin/zeittts.sh
