@@ -226,7 +226,7 @@ recognize_from_microphone()
                 if (strcmp(hyp, "COMPUTER ZEIT")==0)
                 {
                         printf("Zeitinfo\n");
-                        system("/root/zeittts.sh");
+                        system("/usr/local/bin/zeittts.sh");
                         fflush(stdout);
                 }
                 if (strcmp(hyp, "COMPUTER NEWS")==0)
