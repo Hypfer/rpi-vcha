@@ -1426,7 +1426,9 @@ config.status:1161: creating test/unit/test_util/Makefile
 config.status:1161: creating test/regression/testfuncs.sh
 config.status:1161: creating test/regression/Makefile
 config.status:1161: creating include/config.h
+config.status:1342: include/config.h is unchanged
 config.status:1161: creating include/sphinx_config.h
+config.status:1342: include/sphinx_config.h is unchanged
 config.status:1390: executing depfiles commands
 config.status:1390: executing libtool commands
 
@@ -1570,15 +1572,15 @@ lt_cv_to_tool_file_cmd=func_convert_file_noop
 ## Output variables. ##
 ## ----------------- ##
 
-ACLOCAL='${SHELL} /root/pi_voice_home_automation/sphinxbase-0.8/missing --run aclocal-1.11'
+ACLOCAL='${SHELL} /root/rpi-vcha/sphinxbase-0.8/missing --run aclocal-1.11'
 AMDEPBACKSLASH='\'
 AMDEP_FALSE='#'
 AMDEP_TRUE=''
 AMTAR='$${TAR-tar}'
 AR='ar'
-AUTOCONF='${SHELL} /root/pi_voice_home_automation/sphinxbase-0.8/missing --run autoconf'
-AUTOHEADER='${SHELL} /root/pi_voice_home_automation/sphinxbase-0.8/missing --run autoheader'
-AUTOMAKE='${SHELL} /root/pi_voice_home_automation/sphinxbase-0.8/missing --run automake-1.11'
+AUTOCONF='${SHELL} /root/rpi-vcha/sphinxbase-0.8/missing --run autoconf'
+AUTOHEADER='${SHELL} /root/rpi-vcha/sphinxbase-0.8/missing --run autoheader'
+AUTOMAKE='${SHELL} /root/rpi-vcha/sphinxbase-0.8/missing --run automake-1.11'
 AWK='mawk'
 BUILD_CYTHON_FALSE=''
 BUILD_CYTHON_TRUE='#'
@@ -1625,7 +1627,7 @@ LIPO=''
 LN_S='ln -s'
 LTLIBICONV=''
 LTLIBOBJS=''
-MAKEINFO='${SHELL} /root/pi_voice_home_automation/sphinxbase-0.8/missing --run makeinfo'
+MAKEINFO='${SHELL} /root/rpi-vcha/sphinxbase-0.8/missing --run makeinfo'
 MANIFEST_TOOL=':'
 MKDIR_P='/bin/mkdir -p'
 NM='/usr/bin/nm -B'
@@ -1696,7 +1698,7 @@ host_vendor='unknown'
 htmldir='${docdir}'
 includedir='${prefix}/include'
 infodir='${datarootdir}/info'
-install_sh='${SHELL} /root/pi_voice_home_automation/sphinxbase-0.8/install-sh'
+install_sh='${SHELL} /root/rpi-vcha/sphinxbase-0.8/install-sh'
 libdir='${exec_prefix}/lib'
 libexecdir='${exec_prefix}/libexec'
 localedir='${datarootdir}/locale'

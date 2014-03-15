@@ -14,9 +14,9 @@ bin_mdef.lo: bin_mdef.c /usr/include/stdio.h /usr/include/features.h \
  /usr/include/xlocale.h /usr/include/arm-linux-gnueabihf/bits/string.h \
  /usr/include/arm-linux-gnueabihf/bits/string2.h /usr/include/stdlib.h \
  /usr/include/assert.h \
- /root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/prim_type.h \
- /root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinx_config.h \
- /root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/ckd_alloc.h \
+ /root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/prim_type.h \
+ /root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinx_config.h \
+ /root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/ckd_alloc.h \
  /usr/include/arm-linux-gnueabihf/bits/waitflags.h \
  /usr/include/arm-linux-gnueabihf/bits/waitstatus.h /usr/include/endian.h \
  /usr/include/arm-linux-gnueabihf/bits/endian.h \
@@ -30,19 +30,19 @@ bin_mdef.lo: bin_mdef.c /usr/include/stdio.h /usr/include/features.h \
  /usr/include/arm-linux-gnueabihf/bits/pthreadtypes.h \
  /usr/include/alloca.h /usr/include/setjmp.h \
  /usr/include/arm-linux-gnueabihf/bits/setjmp.h \
- /root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/sphinxbase_export.h \
- /root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/byteorder.h \
- /root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/case.h \
- /root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/err.h \
+ /root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/sphinxbase_export.h \
+ /root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/byteorder.h \
+ /root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/case.h \
+ /root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/err.h \
  /usr/include/errno.h /usr/include/arm-linux-gnueabihf/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/arm-linux-gnueabihf/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  mdef.h \
- /root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/hash_table.h \
- /root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/glist.h \
+ /root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/hash_table.h \
+ /root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/glist.h \
  bin_mdef.h \
- /root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/mmio.h \
- /root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/cmd_ln.h \
+ /root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/mmio.h \
+ /root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/cmd_ln.h \
  ../../include/pocketsphinx_export.h
 
 /usr/include/stdio.h:
@@ -89,11 +89,11 @@ bin_mdef.lo: bin_mdef.c /usr/include/stdio.h /usr/include/features.h \
 
 /usr/include/assert.h:
 
-/root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/prim_type.h:
+/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/prim_type.h:
 
-/root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinx_config.h:
+/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinx_config.h:
 
-/root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/ckd_alloc.h:
+/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/ckd_alloc.h:
 
 /usr/include/arm-linux-gnueabihf/bits/waitflags.h:
 
@@ -127,13 +127,13 @@ bin_mdef.lo: bin_mdef.c /usr/include/stdio.h /usr/include/features.h \
 
 /usr/include/arm-linux-gnueabihf/bits/setjmp.h:
 
-/root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/sphinxbase_export.h:
+/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/sphinxbase_export.h:
 
-/root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/byteorder.h:
+/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/byteorder.h:
 
-/root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/case.h:
+/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/case.h:
 
-/root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/err.h:
+/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/err.h:
 
 /usr/include/errno.h:
 
@@ -149,14 +149,14 @@ bin_mdef.lo: bin_mdef.c /usr/include/stdio.h /usr/include/features.h \
 
 mdef.h:
 
-/root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/hash_table.h:
+/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/hash_table.h:
 
-/root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/glist.h:
+/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/glist.h:
 
 bin_mdef.h:
 
-/root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/mmio.h:
+/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/mmio.h:
 
-/root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/cmd_ln.h:
+/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/cmd_ln.h:
 
 ../../include/pocketsphinx_export.h:

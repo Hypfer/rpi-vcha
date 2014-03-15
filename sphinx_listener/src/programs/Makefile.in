@@ -51,7 +51,7 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-bin_PROGRAMS = rpi_home_automation_listener$(EXEEXT)
+bin_PROGRAMS = rpi-vcha$(EXEEXT)
 subdir = src/programs
 DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -66,11 +66,9 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_rpi_home_automation_listener_OBJECTS =  \
-	rpi_home_automation_listener.$(OBJEXT)
-rpi_home_automation_listener_OBJECTS =  \
-	$(am_rpi_home_automation_listener_OBJECTS)
-rpi_home_automation_listener_DEPENDENCIES =  \
+am_rpi_vcha_OBJECTS = rpi-vcha.$(OBJEXT)
+rpi_vcha_OBJECTS = $(am_rpi_vcha_OBJECTS)
+rpi_vcha_DEPENDENCIES =  \
 	$(top_builddir)/src/libpocketsphinx/libpocketsphinx.la
 DEFAULT_INCLUDES = -I.@am__isrc@
 depcomp = $(SHELL) $(top_srcdir)/depcomp
@@ -85,8 +83,8 @@ CCLD = $(CC)
 LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
 	$(LDFLAGS) -o $@
-SOURCES = $(rpi_home_automation_listener_SOURCES)
-DIST_SOURCES = $(rpi_home_automation_listener_SOURCES)
+SOURCES = $(rpi_vcha_SOURCES)
+DIST_SOURCES = $(rpi_vcha_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -222,8 +220,8 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-rpi_home_automation_listener_SOURCES = rpi_home_automation_listener.c
-rpi_home_automation_listener_LDADD = \
+rpi_vcha_SOURCES = rpi-vcha.c
+rpi_vcha_LDADD = \
 	$(top_builddir)/src/libpocketsphinx/libpocketsphinx.la -lsphinxad
 
 INCLUDES = -I$(top_srcdir)/include \
@@ -310,9 +308,9 @@ clean-binPROGRAMS:
 	list=`for p in $$list; do echo "$$p"; done | sed 's/$(EXEEXT)$$//'`; \
 	echo " rm -f" $$list; \
 	rm -f $$list
-rpi_home_automation_listener$(EXEEXT): $(rpi_home_automation_listener_OBJECTS) $(rpi_home_automation_listener_DEPENDENCIES) $(EXTRA_rpi_home_automation_listener_DEPENDENCIES) 
-	@rm -f rpi_home_automation_listener$(EXEEXT)
-	$(LINK) $(rpi_home_automation_listener_OBJECTS) $(rpi_home_automation_listener_LDADD) $(LIBS)
+rpi-vcha$(EXEEXT): $(rpi_vcha_OBJECTS) $(rpi_vcha_DEPENDENCIES) $(EXTRA_rpi_vcha_DEPENDENCIES) 
+	@rm -f rpi-vcha$(EXEEXT)
+	$(LINK) $(rpi_vcha_OBJECTS) $(rpi_vcha_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -320,7 +318,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/rpi_home_automation_listener.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/rpi-vcha.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<

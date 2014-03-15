@@ -51,7 +51,7 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = armv6l-unknown-linux-gnueabi
 host_triplet = armv6l-unknown-linux-gnueabi
-bin_PROGRAMS = rpi_home_automation_listener$(EXEEXT)
+bin_PROGRAMS = rpi-vcha$(EXEEXT)
 subdir = src/programs
 DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -66,11 +66,9 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_rpi_home_automation_listener_OBJECTS =  \
-	rpi_home_automation_listener.$(OBJEXT)
-rpi_home_automation_listener_OBJECTS =  \
-	$(am_rpi_home_automation_listener_OBJECTS)
-rpi_home_automation_listener_DEPENDENCIES =  \
+am_rpi_vcha_OBJECTS = rpi-vcha.$(OBJEXT)
+rpi_vcha_OBJECTS = $(am_rpi_vcha_OBJECTS)
+rpi_vcha_DEPENDENCIES =  \
 	$(top_builddir)/src/libpocketsphinx/libpocketsphinx.la
 DEFAULT_INCLUDES = -I.
 depcomp = $(SHELL) $(top_srcdir)/depcomp
@@ -85,8 +83,8 @@ CCLD = $(CC)
 LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
 	$(LDFLAGS) -o $@
-SOURCES = $(rpi_home_automation_listener_SOURCES)
-DIST_SOURCES = $(rpi_home_automation_listener_SOURCES)
+SOURCES = $(rpi_vcha_SOURCES)
+DIST_SOURCES = $(rpi_vcha_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -95,18 +93,18 @@ am__can_run_installinfo = \
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /root/pi_voice_home_automation/missing --run aclocal-1.11
+ACLOCAL = ${SHELL} /root/rpi-vcha/sphinx_listener/missing --run aclocal-1.11
 AMTAR = $${TAR-tar}
 AR = ar
-AUTOCONF = ${SHELL} /root/pi_voice_home_automation/missing --run autoconf
-AUTOHEADER = ${SHELL} /root/pi_voice_home_automation/missing --run autoheader
-AUTOMAKE = ${SHELL} /root/pi_voice_home_automation/missing --run automake-1.11
+AUTOCONF = ${SHELL} /root/rpi-vcha/sphinx_listener/missing --run autoconf
+AUTOHEADER = ${SHELL} /root/rpi-vcha/sphinx_listener/missing --run autoheader
+AUTOMAKE = ${SHELL} /root/rpi-vcha/sphinx_listener/missing --run automake-1.11
 AWK = mawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2 -Wall
 CPP = gcc -E
-CPPFLAGS = -I/root/pi_voice_home_automation/../sphinxbase-0.8/include -I/root/pi_voice_home_automation/../sphinxbase-0.8/include 
+CPPFLAGS = -I/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include -I/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include 
 CYGPATH_W = echo
 DEFS = -DPACKAGE_NAME=\"pocketsphinx\" -DPACKAGE_TARNAME=\"pocketsphinx\" -DPACKAGE_VERSION=\"0.8\" -DPACKAGE_STRING=\"pocketsphinx\ 0.8\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LONG_LONG=1 -DSIZEOF_LONG_LONG=8 -DHAVE_DUP2=1
 DEPDIR = .deps
@@ -134,14 +132,14 @@ INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /usr/bin/ld
-LDFLAGS =  -L/root/pi_voice_home_automation/../sphinxbase-0.8/src/libsphinxad 		  -L/root/pi_voice_home_automation/../sphinxbase-0.8/src/libsphinxbase 		  -L/root/pi_voice_home_automation/../sphinxbase-0.8/src/libsphinxbase/.libs
+LDFLAGS =  -L/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/src/libsphinxad 		  -L/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/src/libsphinxbase 		  -L/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/src/libsphinxbase/.libs
 LIBOBJS = 
 LIBS =  -lsphinxbase
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /root/pi_voice_home_automation/missing --run makeinfo
+MAKEINFO = ${SHELL} /root/rpi-vcha/sphinx_listener/missing --run makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
 NM = /usr/bin/nm -B
@@ -167,10 +165,10 @@ STRIP = strip
 SphinxBase_CFLAGS = 
 SphinxBase_LIBS = 
 VERSION = 0.8
-abs_builddir = /root/pi_voice_home_automation/src/programs
-abs_srcdir = /root/pi_voice_home_automation/src/programs
-abs_top_builddir = /root/pi_voice_home_automation
-abs_top_srcdir = /root/pi_voice_home_automation
+abs_builddir = /root/rpi-vcha/sphinx_listener/src/programs
+abs_srcdir = /root/rpi-vcha/sphinx_listener/src/programs
+abs_top_builddir = /root/rpi-vcha/sphinx_listener
+abs_top_srcdir = /root/rpi-vcha/sphinx_listener
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_DUMPBIN = 
@@ -199,7 +197,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /root/pi_voice_home_automation/install-sh
+install_sh = ${SHELL} /root/rpi-vcha/sphinx_listener/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -214,16 +212,16 @@ program_transform_name = s,x,x,
 psdir = ${docdir}
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
-sphinxbase = /root/pi_voice_home_automation/../sphinxbase-0.8
-sphinxbasebuild = /root/pi_voice_home_automation/../sphinxbase-0.8
+sphinxbase = /root/rpi-vcha/sphinx_listener/../sphinxbase-0.8
+sphinxbasebuild = /root/rpi-vcha/sphinx_listener/../sphinxbase-0.8
 srcdir = .
 sysconfdir = ${prefix}/etc
 target_alias = 
 top_build_prefix = ../../
 top_builddir = ../..
 top_srcdir = ../..
-rpi_home_automation_listener_SOURCES = rpi_home_automation_listener.c
-rpi_home_automation_listener_LDADD = \
+rpi_vcha_SOURCES = rpi-vcha.c
+rpi_vcha_LDADD = \
 	$(top_builddir)/src/libpocketsphinx/libpocketsphinx.la -lsphinxad
 
 INCLUDES = -I$(top_srcdir)/include \
@@ -310,9 +308,9 @@ clean-binPROGRAMS:
 	list=`for p in $$list; do echo "$$p"; done | sed 's/$(EXEEXT)$$//'`; \
 	echo " rm -f" $$list; \
 	rm -f $$list
-rpi_home_automation_listener$(EXEEXT): $(rpi_home_automation_listener_OBJECTS) $(rpi_home_automation_listener_DEPENDENCIES) $(EXTRA_rpi_home_automation_listener_DEPENDENCIES) 
-	@rm -f rpi_home_automation_listener$(EXEEXT)
-	$(LINK) $(rpi_home_automation_listener_OBJECTS) $(rpi_home_automation_listener_LDADD) $(LIBS)
+rpi-vcha$(EXEEXT): $(rpi_vcha_OBJECTS) $(rpi_vcha_DEPENDENCIES) $(EXTRA_rpi_vcha_DEPENDENCIES) 
+	@rm -f rpi-vcha$(EXEEXT)
+	$(LINK) $(rpi_vcha_OBJECTS) $(rpi_vcha_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -320,7 +318,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-include ./$(DEPDIR)/rpi_home_automation_listener.Po
+include ./$(DEPDIR)/rpi-vcha.Po
 
 .c.o:
 	$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<

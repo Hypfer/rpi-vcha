@@ -1,7 +1,7 @@
 # Utility functions and parameters for regression tests
 
 # Predefined directories you may need
-# Stupid broken CMU Facilities autoconf doesn't do /root/pi_voice_home_automation/sphinxbase-0.8
+# Stupid broken CMU Facilities autoconf doesn't do /root/rpi-vcha/sphinxbase-0.8
 builddir=../"../.."
 sourcedir=../"../.."
 tests=$sourcedir/test

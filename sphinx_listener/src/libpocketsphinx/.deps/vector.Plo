@@ -33,16 +33,16 @@ vector.lo: vector.c /usr/include/stdio.h /usr/include/features.h \
  /usr/include/arm-linux-gnueabihf/bits/mathdef.h \
  /usr/include/arm-linux-gnueabihf/bits/mathcalls.h \
  /usr/include/arm-linux-gnueabihf/bits/mathinline.h \
- /root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/err.h \
+ /root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/err.h \
  /usr/include/errno.h /usr/include/arm-linux-gnueabihf/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/arm-linux-gnueabihf/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
- /root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/sphinxbase_export.h \
- /root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/ckd_alloc.h \
+ /root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/sphinxbase_export.h \
+ /root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/ckd_alloc.h \
  /usr/include/setjmp.h /usr/include/arm-linux-gnueabihf/bits/setjmp.h \
- /root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/prim_type.h \
- /root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinx_config.h \
- /root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/bitvec.h \
+ /root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/prim_type.h \
+ /root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinx_config.h \
+ /root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/bitvec.h \
  vector.h
 
 /usr/include/stdio.h:
@@ -135,7 +135,7 @@ vector.lo: vector.c /usr/include/stdio.h /usr/include/features.h \
 
 /usr/include/arm-linux-gnueabihf/bits/mathinline.h:
 
-/root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/err.h:
+/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/err.h:
 
 /usr/include/errno.h:
 
@@ -149,18 +149,18 @@ vector.lo: vector.c /usr/include/stdio.h /usr/include/features.h \
 
 /usr/include/asm-generic/errno-base.h:
 
-/root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/sphinxbase_export.h:
+/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/sphinxbase_export.h:
 
-/root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/ckd_alloc.h:
+/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/ckd_alloc.h:
 
 /usr/include/setjmp.h:
 
 /usr/include/arm-linux-gnueabihf/bits/setjmp.h:
 
-/root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/prim_type.h:
+/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/prim_type.h:
 
-/root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinx_config.h:
+/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinx_config.h:
 
-/root/pi_voice_home_automation/../sphinxbase-0.8/include/sphinxbase/bitvec.h:
+/root/rpi-vcha/sphinx_listener/../sphinxbase-0.8/include/sphinxbase/bitvec.h:
 
 vector.h:
