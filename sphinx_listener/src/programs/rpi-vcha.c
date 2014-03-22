@@ -207,14 +207,14 @@ recognize_from_microphone()
                 }
                 if (strcmp(hyp, "COMPUTER LAMPE AN")==0)
                 {
-                        printf("Turning LED on\n");
-                        system("echo 1 > /sys/class/gpio/gpio25/value");
+                        printf("Turning LAMPE on\n");
+                        system("send 11101 1 1 2>1 > /dev/null &");
                         fflush(stdout);
                 }
                 if (strcmp(hyp, "COMPUTER LAMPE AUS")==0)
                 {
                         printf("Turning LED OFF\n");
-                        system("echo 0 > /sys/class/gpio/gpio25/value");
+                        system("send 11101 1 0 2>1 > /dev/null &");
                         fflush(stdout);
                 }
                 if (strcmp(hyp, "COMPUTER WETTER")==0)
@@ -262,11 +262,6 @@ sighandler(int signo)
 int
 main(int argc, char *argv[])
 {
-    //enable the LED GPIO
-    system("echo 25 > /sys/class/gpio/export");
-    system("echo out > /sys/class/gpio/gpio25/direction");
-
-
 
     char const *cfg;
 

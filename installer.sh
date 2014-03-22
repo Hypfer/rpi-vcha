@@ -6,7 +6,18 @@ echo "Ansonsten kommt es zu Doppeleinträgen im Crontab und /etc/modules"
 echo "Paketquellen Update"
 apt-get update
 echo "Installiere benötigte Pakete"
-apt-get install alsa-base alsa-utils libasound2-dev build-essential libttspico-data libpopt0 libpopt-dev make autoconf automake git libtool sox wget -y
+apt-get install alsa-base alsa-utils libasound2-dev build-essential libttspico-data libpopt0 libpopt-dev make autoconf automake git libtool sox wget sudo -y
+echo "Installiere Wiringpi"
+git clone git://git.drogon.net/wiringPi
+cd wiringPi
+./build
+cd ..
+echo "Installiere send"
+git clone git://github.com/xkonni/raspberry-remote.git
+cd raspberry-remote
+make send
+cp send /usr/local/bin/
+cd ..
 echo "Installiere SphinxBase"
 cd ./sphinxbase-0.8
 make clean
