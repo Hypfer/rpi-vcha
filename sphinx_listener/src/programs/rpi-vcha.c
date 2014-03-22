@@ -213,7 +213,7 @@ recognize_from_microphone()
                 }
                 if (strcmp(hyp, "COMPUTER LAMPE AUS")==0)
                 {
-                        printf("Turning LED OFF\n");
+                        printf("Turning LAMPE OFF\n");
                         system("send 11101 1 0 2>1 > /dev/null &");
                         fflush(stdout);
                 }
