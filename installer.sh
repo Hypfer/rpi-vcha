@@ -6,7 +6,7 @@ echo "Ansonsten kommt es zu Doppeleinträgen im Crontab und /etc/modules"
 echo "Paketquellen Update"
 apt-get update
 echo "Installiere benötigte Pakete"
-apt-get install alsa-base alsa-utils libasound2-dev build-essential libttspico-data libpopt0 libpopt-dev make autoconf automake git libtool sox wget sudo -y
+apt-get install alsa-base alsa-utils bison libasound2-dev build-essential libttspico-data libpopt0 libpopt-dev make autoconf automake git libtool sox wget sudo -y
 echo "Installiere Wiringpi"
 git clone git://git.drogon.net/wiringPi
 cd wiringPi
